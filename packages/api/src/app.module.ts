@@ -1,12 +1,10 @@
 import {
   ReflectMetadataProvider,
-  UnderscoreNamingStrategy,
+  UnderscoreNamingStrategy
 } from '@mikro-orm/core';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { CategoriesModule } from './categories/categories.module';
 import { OperationsModule } from './operations/operations.module';
@@ -35,7 +33,5 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     CategoriesModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
